@@ -1,0 +1,271 @@
+.walker-1 {
+  background-color: black;
+  border: 10px solid springgreen;
+
+  .header-inner-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    color: springgreen;
+  }
+}
+
+.mini-me {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+
+  &-inner {
+    width: 100%;
+    height: 50px;
+    max-width: 608px;
+
+    &-2 {
+      position: relative;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.wrapper-data {
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .life {
+    width: 25px;
+    height: 25px;
+  }
+
+  .level {
+    padding: 0 20px;
+  }
+
+  .score {
+    span {
+      padding: 0 5px;
+    }
+  }
+
+
+}
+
+
+
+
+// PIXEL ART
+
+// common -----------------------
+
+@function shapeMaker($shape-former-list,$colors, $shadow-count: $grid) {
+  $shadows: ();
+  $row: 0;
+  $col: 1;
+  
+  @for $i from 1 through length($shape-former-list) {
+    @if( nth($shape-former-list,$i) > 0 ) {
+      $shadows: append($shadows, ($col * 1px) ($row * 1px) 0 map-get($colors,nth($shape-former-list,$i)), 'comma');
+    }
+    
+    @if($i % $grid == 0) {
+      $row: $row+1;
+      $col: 0;
+    }
+    
+    $col: $col + 1;
+  }
+  
+  @return $shadows;
+}
+
+$grid: 10;
+
+// Mini me -----------------------
+$hair: purple;
+$skin: #f0d0d0;
+$clothes: springgreen;
+
+$colors-me: (
+  1: $hair,
+  2: $skin,
+  3: $clothes
+);
+
+// Mini me Walker -----------------------
+$mini-me-walker-1: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,1,1,1,1,0,0,0, 
+                   0,0,0,1,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,3,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,0,0,0, 
+                   0,0,0,0,2,2,0,0,0,0; 
+
+$mini-me-walker-2: 0,0,0,0,1,0,1,0,0,0, 
+                   0,0,0,1,1,1,0,0,0,0, 
+                   0,0,0,1,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,2,0,0, 
+                   0,0,0,0,3,3,0,2,0,0, 
+                   0,0,0,3,3,0,2,0,0,0, 
+                   0,0,0,2,2,0,0,0,0,0; 
+                 
+$mini-me-walker-3: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,1,0,1,0,0,0,0, 
+                   0,0,0,1,1,1,0,0,0,0, 
+                   0,0,0,0,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,2,2,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,0,0,0, 
+                   0,0,2,2,3,3,3,0,0,0, 
+                   0,0,0,3,3,3,3,0,0,0, 
+                   0,0,2,2,0,0,2,2,0,0; 
+
+$mini-me-walker-4: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,0,1,1,0,0,0,0, 
+                   0,0,0,1,1,2,1,0,0,0, 
+                   0,0,0,1,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,0,0,0, 
+                   0,0,0,0,3,3,0,0,0,0, 
+                   0,0,2,3,3,3,3,0,0,0, 
+                   0,0,2,0,0,2,2,0,0,0; 
+                  
+$mini-me-walker-5: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,1,1,1,1,0,0,0, 
+                   0,0,0,1,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,3,2,0,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,3,3,0,0,0,0, 
+                   0,0,0,2,3,3,0,0,0,0, 
+                   0,0,0,0,2,2,0,0,0,0; 
+                
+$mini-me-walker-6: 0,0,0,0,1,0,1,0,0,0, 
+                   0,0,0,1,1,1,0,0,0,0, 
+                   0,0,0,1,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,3,2,0,0,0,0, 
+                   0,0,0,0,3,2,0,2,0,0, 
+                   0,0,0,0,3,3,0,2,0,0, 
+                   0,0,0,3,3,0,2,0,0,0, 
+                   0,0,0,2,2,0,0,0,0,0; 
+
+$mini-me-walker-7: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,1,0,1,0,0,0,0, 
+                   0,0,0,1,1,1,0,0,0,0, 
+                   0,0,0,0,1,2,0,0,0,0, 
+                   0,0,0,0,2,2,2,0,0,0, 
+                   0,0,0,0,3,2,0,0,0,0, 
+                   0,0,0,0,3,2,0,0,0,0, 
+                   0,0,0,0,3,3,2,0,0,0, 
+                   0,0,0,3,3,3,3,0,0,0, 
+                   0,0,2,2,0,0,2,2,0,0; 
+
+$mini-me-walker-8: 0,0,0,0,0,0,0,0,0,0, 
+                   0,0,0,0,1,1,0,0,0,0, 
+                   0,0,0,1,1,2,1,0,0,0, 
+                   0,0,0,1,2,2,2,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,2,3,0,0,0,0, 
+                   0,0,0,0,3,2,0,0,0,0, 
+                   0,0,0,0,3,3,0,0,0,0, 
+                   0,0,2,3,3,3,3,0,0,0, 
+                   0,0,2,0,0,2,2,0,0,0;
+
+.pixel-art-me {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transform: scale(5);
+  animation: walker .65s step-start infinite, slide 6s steps(300) infinite  alternate,flip 12s steps(1) infinite;
+  box-shadow: shapeMaker($mini-me-walker-1, $colors-me);
+}
+
+
+
+@keyframes flip {
+  0% {
+    transform: translateX(0) rotateY(0deg) scale(5);
+  }
+  50%{
+    transform: translateX(50px) rotateY(180deg) scale(5);
+  }
+}
+
+@keyframes slide {
+  0% { left: 0;}
+  100% {left: 500px; }
+}
+
+
+@keyframes walker {
+  12% { box-shadow: shapeMaker($mini-me-walker-2,$colors-me); }
+  25% { box-shadow: shapeMaker($mini-me-walker-3,$colors-me); }
+  37% { box-shadow: shapeMaker($mini-me-walker-4,$colors-me); }
+  50% { box-shadow: shapeMaker($mini-me-walker-5,$colors-me); }
+  62% { box-shadow: shapeMaker($mini-me-walker-6,$colors-me); }
+  75% { box-shadow: shapeMaker($mini-me-walker-7,$colors-me); }
+  87% { box-shadow: shapeMaker($mini-me-walker-8,$colors-me); }
+}
+
+
+// Heart -----------------------
+
+$heart: red;
+
+$colors-heart: (
+  1: $heart,
+);
+
+$heart-beat:0,0,0,0,0,0,0,0,0,0, 
+            0,1,1,1,0,0,1,1,1,0, 
+            1,1,1,1,1,1,1,1,1,1, 
+            1,1,1,1,1,1,1,1,1,1,  
+            1,1,1,1,1,1,1,1,1,1,  
+            0,1,1,1,1,1,1,1,1,0,  
+            0,0,1,1,1,1,1,1,0,0, 
+            0,0,0,1,1,1,1,0,0,0,
+            0,0,0,0,1,1,0,0,0,0,
+            0,0,0,0,0,0,0,0,0,0; 
+
+
+.pixel-art-heart {
+  width: 1px;
+  height: 1px;
+  transform: scale(2);
+  animation: heartBeat 1s step-start infinite;
+  box-shadow: shapeMaker($heart-beat,$colors-heart);
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(2);
+  }
+  25% {
+    transform: scale(2.1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(2.1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}

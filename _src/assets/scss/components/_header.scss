@@ -1,0 +1,35 @@
+// .page__header {
+//   display: flex;
+//   justify-content: space-evenly;
+//   margin-bottom: 3rem;
+// }
+
+.header-walker-1 {
+  position: relative;
+  height: 160px;
+
+  .header-inner,.container {
+    height: 100%;
+
+    &-2 {
+      height: 100%;
+      display: flex;
+      justify-content: space-between
+    }
+  }
+}
+
+.wrapper-title {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.print {
+  color: springgreen;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  
+}

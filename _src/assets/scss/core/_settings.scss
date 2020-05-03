@@ -1,0 +1,88 @@
+// Media Query ranges
+
+$mq_min_large_desktop: 1600px; //TODO CHECK
+$mq_min_small_desktop: 1278px; //TODO CHECK
+$mq_min_large_tablet: 980px; //TODO CHECK
+$mq_min_medium_tablet: 768px; //TODO CHECK
+$mq_min_small_tablet: 630px; //TODO CHECK
+$mq_min_large_phone: 520px; //TODO CHECK
+$mq_min_small_phone: 330px; //TODO CHECK
+
+$mq_max_large_tablet: $mq_min_small_desktop - 1;
+$mq_max_medium_tablet: $mq_min_large_tablet - 1;
+$mq_max_small_tablet: $mq_min_medium_tablet - 1;
+$mq_max_large_phone: $mq_min_small_tablet - 1;
+$mq_max_small_phone: $mq_min_large_phone - 1;
+$mq_max_smallest_phone: $mq_min_small_phone - 1;
+
+// Layout dimensions
+
+$layout_max_width: 1200px; //TODO CHECK
+$max_width: 720px; //TODO CHECK
+
+// Colors
+
+$body_background: #ffffff; //TODO CHECK
+
+$color_1 : #000000; //TODO CHECK
+$color_2 : #ff0; //TODO CHECK
+$color_3: #9B9B9B; //TODO CHECK
+
+$negative_color: #ffffff; //TODO CHECK
+
+$text_normal_color: $color_1; //TODO CHECK
+$text_link_color: $color_1; //TODO CHECK
+$text_hover_color: $color_1; //TODO CHECK
+
+$button_color : $text_link_color; //TODO CHECK
+$button_border_color : $text_link_color; //TODO CHECK
+$button_hover_color : $text_normal_color; //TODO CHECK
+$button_hover_background : $text_link_color; //TODO CHECK
+
+$color_ok: #90CA56; //TODO CHECK
+$color_error: #D0021B; //TODO CHECK
+
+$text_selection_color: $text_normal_color; //TODO CHECK
+$text_selection_background_color: fade-out($text_normal_color, 0.8); //TODO CHECK
+
+$text_input_color: $negative_color; //TODO CHECK
+$form_input_background_color : $text_link_color; //TODO CHECK
+$form_input_focus_border_color: $color_2; //TODO CHECK
+
+$footer_background : #06111C; //TODO CHECK
+$footer_link_color: #ffffff; //TODO CHECK
+
+
+// Text size and typography
+
+$text_size_default: 1.6; //rem //TODO CHECK
+$text_lineheight_default : 1.4; //em //TODO CHECK
+
+$font_family: 'zx_spectrumregular';
+$font_family_2: '8-bit_operator';
+// $font_family_3: 'atari_';
+// Spaces
+
+$space_6: 60px;
+$space_5: 50px;
+$space_4: 40px;
+$space_3: 30px;
+$space_2: 20px;
+$space_1: 10px; 
+
+// Borders
+
+$border_width: 2px; //TODO CHECK
+$border_radius: 4px; //TODO CHECK
+
+
+// Transitions
+
+$transition_timing_function: cubic-bezier(.24,.72,.35,1.01);
+
+// fonts
+$font-main: "Roboto", sans-serif;
+
+// colors
+$color-white: #f3f4f5;
+$color-secondary: #999;

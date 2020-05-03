@@ -1,0 +1,249 @@
+
+$pixelSize : 10px;
+
+
+.canvas-walker-1, .canvas-anime {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.canvas-anime {
+  z-index: 10;
+  cursor: pointer;
+
+  .pixel-anime {
+    position: absolute;
+    width: $pixelSize;
+  
+    &:nth-child(1) {
+      top: $pixelSize*7;
+      left: $pixelSize*10;
+    }
+  
+    &:nth-child(2) {
+      top: $pixelSize*7;
+      left: $pixelSize*6;
+    }
+
+    &:nth-child(1), &:nth-child(2) {
+      height: 0;
+      background-color: #f8ece7;
+      animation:  eyes 3.5s ease-in-out 0s infinite ;
+      // -webkit-animation: eyes 1.3s ease-in-out 0s infinite ;
+      // -moz-animation: eyes 1.3s ease-in-out 0s infinite ;
+      // -o-animation: eyes 1.3s ease-in-out 0s infinite ;
+    }
+
+    &:nth-child(3) {
+      top: $pixelSize*12;
+      left: $pixelSize*9;
+    }
+  
+    &:nth-child(4) {
+      top: $pixelSize*12;
+      left: $pixelSize*8;
+    }
+
+    &:nth-child(3), &:nth-child(4) {
+      height: $pixelSize;
+      background-image: linear-gradient(to top, #f8ece7, #f1e4df, #e9dcd6, #e2d4ce, #dbccc6);
+      animation-duration: 0.7s ;
+      animation-iteration-count: 2;
+      animation-fill-mode: forwards;
+      transform: translateY(2px)
+      
+    }
+   
+  }
+}
+
+.pixel {
+  width: $pixelSize;
+  height: $pixelSize;
+  float: left;
+  box-shadow: 0px 0px 1px black;
+}
+
+@keyframes eyes {
+  0% {
+    height: 0;
+  }
+  10% {
+    height: 10px;
+  }
+
+  20% {
+    height: 0px;
+  }
+
+  100% {
+
+  }
+}
+
+@keyframes mouth {
+  0% {
+    transform: translateY(2px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transition: translateY(2px);
+  }
+}
+
+/* Hair */
+.pixel:nth-child(19),
+.pixel:nth-child(20), 
+.pixel:nth-child(27), 
+.pixel:nth-child(28), 
+.pixel:nth-child(34), 
+.pixel:nth-child(35), 
+.pixel:nth-child(36), 
+.pixel:nth-child(38),
+.pixel:nth-child(39),
+.pixel:nth-child(40),
+.pixel:nth-child(41),
+.pixel:nth-child(42),
+.pixel:nth-child(43),
+.pixel:nth-child(44), 
+.pixel:nth-child(45), 
+.pixel:nth-child(50),
+.pixel:nth-child(51),
+.pixel:nth-child(52),
+.pixel:nth-child(53), 
+.pixel:nth-child(54), 
+.pixel:nth-child(55), 
+.pixel:nth-child(60), 
+.pixel:nth-child(61), 
+.pixel:nth-child(68), 
+.pixel:nth-child(69), 
+.pixel:nth-child(70), 
+.pixel:nth-child(71),
+.pixel:nth-child(76),  
+.pixel:nth-child(83), 
+.pixel:nth-child(84), 
+.pixel:nth-child(85),
+.pixel:nth-child(99), 
+.pixel:nth-child(100), 
+.pixel:nth-child(101), 
+.pixel:nth-child(102), 
+.pixel:nth-child(115), 
+.pixel:nth-child(116), 
+.pixel:nth-child(117),
+.pixel:nth-child(131),
+.pixel:nth-child(147),
+.pixel:nth-child(163) {
+  background: purple;
+}
+
+/* I'm so pale */
+.pixel:nth-child(56),
+.pixel:nth-child(57),
+.pixel:nth-child(58),
+.pixel:nth-child(59),
+.pixel:nth-child(72),
+.pixel:nth-child(73),
+.pixel:nth-child(74),
+.pixel:nth-child(75),
+.pixel:nth-child(86),
+.pixel:nth-child(87),
+.pixel:nth-child(88),
+.pixel:nth-child(89),
+.pixel:nth-child(90),
+.pixel:nth-child(91),
+.pixel:nth-child(92), 
+.pixel:nth-child(92), 
+.pixel:nth-child(103), 
+.pixel:nth-child(104), 
+.pixel:nth-child(105), 
+.pixel:nth-child(106), 
+.pixel:nth-child(107), 
+.pixel:nth-child(108), 
+.pixel:nth-child(118),
+.pixel:nth-child(120),
+.pixel:nth-child(121),
+.pixel:nth-child(122), 
+.pixel:nth-child(124),
+.pixel:nth-child(132), 
+.pixel:nth-child(133), 
+.pixel:nth-child(134), 
+.pixel:nth-child(135), 
+.pixel:nth-child(136), 
+.pixel:nth-child(137), 
+.pixel:nth-child(138), 
+.pixel:nth-child(139), 
+.pixel:nth-child(140), 
+.pixel:nth-child(148), 
+.pixel:nth-child(149), 
+.pixel:nth-child(150), 
+.pixel:nth-child(151), 
+.pixel:nth-child(152), 
+.pixel:nth-child(153),  
+.pixel:nth-child(155), 
+.pixel:nth-child(156), 
+.pixel:nth-child(164), 
+.pixel:nth-child(165), 
+.pixel:nth-child(166), 
+.pixel:nth-child(167), 
+.pixel:nth-child(168), 
+.pixel:nth-child(171), 
+.pixel:nth-child(172), 
+.pixel:nth-child(181), 
+.pixel:nth-child(182), 
+.pixel:nth-child(183), 
+.pixel:nth-child(184), 
+.pixel:nth-child(185), 
+.pixel:nth-child(186), 
+.pixel:nth-child(187), 
+.pixel:nth-child(188), 
+.pixel:nth-child(198), 
+.pixel:nth-child(199), 
+.pixel:nth-child(200),  
+.pixel:nth-child(203), 
+.pixel:nth-child(204), 
+.pixel:nth-child(215), 
+.pixel:nth-child(216), 
+.pixel:nth-child(217), 
+.pixel:nth-child(218), 
+.pixel:nth-child(219), 
+.pixel:nth-child(232), 
+.pixel:nth-child(233), 
+.pixel:nth-child(234), 
+.pixel:nth-child(235) {
+  background: #f8ece7;
+}
+
+/* Eyebrows */
+.pixel:nth-child(103),
+.pixel:nth-child(107), 
+.pixel:nth-child(118), 
+.pixel:nth-child(120), 
+.pixel:nth-child(122), 
+.pixel:nth-child(124),
+/* Nose */
+.pixel:nth-child(154), 
+.pixel:nth-child(169), 
+.pixel:nth-child(170){
+  background: #dbccc6;
+}
+/* Mouth */
+.pixel:nth-child(201),
+.pixel:nth-child(202) {
+  background: transparent;
+}
+
+/* Eyeballs */
+.pixel:nth-child(119), 
+.pixel:nth-child(123) {
+  background: saddlebrown;
+}

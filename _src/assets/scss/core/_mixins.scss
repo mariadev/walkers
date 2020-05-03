@@ -1,0 +1,17 @@
+@mixin img-fit($fit: cover, $position: center center, $width: 100%) {
+	img {
+		width: $width;
+		height: 100%;
+		object-fit: $fit;
+		object-position: $position;
+		display: block;
+	}
+	&.compat-object-fit {
+		background-size: $fit;
+		background-repeat: no-repeat;
+		background-position: $position;
+		img {
+			visibility: hidden;
+		}
+	}
+}
